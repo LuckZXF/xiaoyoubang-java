@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE Configure PUBLIC "-//Mort Bay Consulting//DTD Configure//EN" 
+     "http://jetty.mortbay.org/configure.dtd">
+<Configure class="org.mortbay.jetty.webapp.WebAppContext">
+	<New id="ActiveDataSource" class="org.mortbay.jetty.plus.naming.Resource">
+		<Arg>java:/comp/env/jdbc/DBScore</Arg>
+		<Arg>
+			<New class="org.apache.commons.dbcp.BasicDataSource">
+				<Set name="driverClassName">com.mysql.jdbc.Driver</Set>
+				<Set name="url">jdbc:mysql://115.28.95.180/test?autoReconnect=true&amp;zeroDateTimeBehavior=convertToNull</Set>
+				<Set name="username">root</Set>
+				<Set name="password">123444</Set>
+				<Set name="maxActive">20</Set>
+			</New>
+		</Arg>
+	</New>
+
+</Configure>
